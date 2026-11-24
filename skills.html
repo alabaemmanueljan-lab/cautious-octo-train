@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skills | Your Name</title>
+  <meta name="description" content="Technical skills: programming, statistics, machine learning and tooling.">
+  <meta name="color-scheme" content="light dark">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="topbar">
+    <a class="brand" href="index.html">Your Name</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="skills.html" aria-current="page">Skills</a>
+      <a href="cv.pdf">CV</a>
+      <button id="theme-toggle" type="button" aria-label="Toggle light or dark theme">Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1 style="margin-top:2.5rem">Skills</h1>
+    <p class="muted">
+      What I work with, grouped by what I use it for. Where it helps, I say how I've actually used it.
+    </p>
+
+    <!-- HOW TO EDIT: each .skill-group is one category. Copy a block to add a category,
+         add or remove <li> items to change the chips. -->
+
+    <h2>Programming</h2>
+    <div class="skill-group">
+      <h3>Python</h3>
+      <p>How you use it, e.g. research pipelines, backtesting engines, data cleaning at scale.</p>
+      <ul class="tags">
+        <li>NumPy</li>
+        <li>pandas</li>
+        <li>SciPy</li>
+        <li>statsmodels</li>
+        <li>scikit-learn</li>
+        <li>matplotlib</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>R</h3>
+      <p>How you use it, e.g. econometrics and time-series work.</p>
+      <ul class="tags">
+        <li>tidyverse</li>
+        <li>forecast</li>
+        <li>rugarch</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>SQL and data</h3>
+      <p>Pulling, joining and cleaning large datasets.</p>
+      <ul class="tags">
+        <li>SQL</li>
+        <li>Parquet</li>
+        <li>Polars</li>
+      </ul>
+    </div>
+
+    <h2>Quantitative methods</h2>
+    <div class="skill-group">
+      <h3>Statistics and econometrics</h3>
+      <ul class="tags">
+        <li>Regression</li>
+        <li>Hypothesis testing</li>
+        <li>Time-series models</li>
+        <li>Bayesian methods</li>
+        <li>Multiple-testing control</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>Machine learning</h3>
+      <ul class="tags">
+        <li>Gradient boosting</li>
+        <li>Regularized models</li>
+        <li>Cross-validation for time series</li>
+        <li>Feature engineering</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>Finance and risk</h3>
+      <ul class="tags">
+        <li>Portfolio construction</li>
+        <li>Factor models</li>
+        <li>Backtesting</li>
+        <li>Risk metrics</li>
+        <li>Derivatives pricing</li>
+      </ul>
+    </div>
+
+    <h2>Tooling</h2>
+    <div class="skill-group">
+      <ul class="tags">
+        <li>Git / GitHub</li>
+        <li>Jupyter</li>
+        <li>LaTeX</li>
+        <li>Linux / shell</li>
+        <li>Docker</li>
+      </ul>
+    </div>
+
+    <h2>Education and credentials</h2>
+    <ul class="list">
+      <li>Degree, Institution <span class="when">Year</span></li>
+      <li>Relevant coursework or certification <span class="when">Year</span></li>
+    </ul>
+  </main>
+
+  <footer>
+    &copy; <span id="year">2026</span> Your Name
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

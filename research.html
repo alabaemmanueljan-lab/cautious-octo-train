@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research | Your Name</title>
+  <meta name="description" content="Quantitative research projects: methods, results and code.">
+  <meta name="color-scheme" content="light dark">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Math rendering. Write inline math as $...$ and display math as $$...$$.
+       Remove these three lines if you never use formulas. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+          onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="topbar">
+    <a class="brand" href="index.html">Your Name</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="skills.html">Skills</a>
+      <a href="cv.pdf">CV</a>
+      <button id="theme-toggle" type="button" aria-label="Toggle light or dark theme">Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1 style="margin-top:2.5rem">Research</h1>
+    <p class="muted">
+      Projects I've done, newest first. Each one has a short summary, and the
+      "Method" section expands to show how it was done.
+    </p>
+
+    <!-- ==================================================
+         HOW TO ADD A NEW ENTRY
+         1. Copy one whole <article> block below.
+         2. Paste it at the top (newest first).
+         3. Give it a unique id (used for links like research.html#my-id).
+         4. Replace the text, links and tags.
+         5. Delete any part you don't need (figure, details, links).
+         ================================================== -->
+
+    <!-- ===== Entry 1 ===== -->
+    <article class="entry" id="momentum">
+      <h3>Cross-Sectional Momentum in Equity Returns</h3>
+      <div class="meta">2025 &middot; Independent research &middot; [Thesis / coursework / work project]</div>
+
+      <p>
+        Two or three sentences: the question you asked, the data you used, and why it matters.
+        For example, whether past winners keep outperforming past losers after accounting for
+        trading costs and common risk factors.
+      </p>
+
+      <div class="key">
+        <strong>Key result:</strong> one sentence with your headline finding, e.g. an
+        out-of-sample Sharpe ratio of X.XX after costs.
+      </div>
+
+      <details>
+        <summary>Method</summary>
+        <ol>
+          <li><strong>Data:</strong> universe, period, frequency, source, how you handled survivorship bias.</li>
+          <li><strong>Signal:</strong> for each asset $i$ at time $t$, rank on the trailing return
+              $r_{i,t-12:t-1}$ and go long the top decile and short the bottom decile.</li>
+          <li><strong>Evaluation:</strong> walk-forward split, transaction-cost assumptions, factor-adjusted alpha.</li>
+          <li><strong>Robustness:</strong> alternative lookbacks, sub-periods, subsamples.</li>
+        </ol>
+        <p>A display equation looks like this:</p>
+        $$ r^{\text{WML}}_t = \frac{1}{N_W}\sum_{i \in W_t} r_{i,t} - \frac{1}{N_L}\sum_{i \in L_t} r_{i,t} $$
+      </details>
+
+      <ul class="tags">
+        <li>Python</li>
+        <li>pandas</li>
+        <li>Factor models</li>
+        <li>Backtesting</li>
+      </ul>
+
+      <div class="entry-links">
+        <a href="papers/momentum.pdf">Paper (PDF)</a>
+        <a href="https://github.com/your-username/momentum-research">Code</a>
+        <a href="papers/momentum-slides.pdf">Slides</a>
+      </div>
+    </article>
+
+    <!-- ===== Entry 2 ===== -->
+    <article class="entry" id="volatility">
+      <h3>Volatility Forecasting: GARCH vs. Realized Measures</h3>
+      <div class="meta">2024 &middot; [Course project / research assistantship]</div>
+
+      <p>
+        Summary of the question, the models you compared, and the loss function or
+        metric you used to judge forecasts.
+      </p>
+
+      <div class="key">
+        <strong>Key result:</strong> one sentence, e.g. which model won and by how much.
+      </div>
+
+      <!-- Optional: a plot or chart. Save images in an "img" folder next to this file. -->
+      <!--
+      <figure>
+        <img src="img/volatility-forecast.png" alt="Forecast vs realized volatility">
+        <figcaption>Figure 1. Describe what the chart shows.</figcaption>
+      </figure>
+      -->
+
+      <details>
+        <summary>Method</summary>
+        <ul>
+          <li>Models: GARCH(1,1), HAR-RV, and a simple baseline.</li>
+          <li>Forecast evaluation with QLIKE loss and Diebold-Mariano tests.</li>
+          <li>Rolling-window estimation, with the window length chosen without lookahead.</li>
+        </ul>
+        <p>A GARCH(1,1) variance recursion: $\sigma_t^2 = \omega + \alpha\,\varepsilon_{t-1}^2 + \beta\,\sigma_{t-1}^2$.</p>
+      </details>
+
+      <ul class="tags">
+        <li>R</li>
+        <li>Time series</li>
+        <li>Econometrics</li>
+      </ul>
+
+      <div class="entry-links">
+        <a href="papers/volatility.pdf">Paper (PDF)</a>
+        <a href="https://github.com/your-username/vol-forecasting">Code</a>
+      </div>
+    </article>
+
+    <!-- ===== Entry 3 ===== -->
+    <article class="entry" id="pairs">
+      <h3>Pairs Trading with Cointegration</h3>
+      <div class="meta">2024 &middot; [Course project]</div>
+
+      <p>
+        Summary of how you selected pairs, how you modeled the spread, and what happened when
+        you tested it out of sample.
+      </p>
+
+      <div class="key">
+        <strong>Key result:</strong> one sentence, including an honest note on what did not work.
+      </div>
+
+      <details>
+        <summary>Method</summary>
+        <ul>
+          <li>Pair selection: Engle-Granger and Johansen tests with multiple-testing control.</li>
+          <li>Spread modeled as an Ornstein-Uhlenbeck process, with entry and exit thresholds in z-score units.</li>
+          <li>Out-of-sample test with realistic costs and borrow constraints.</li>
+        </ul>
+      </details>
+
+      <ul class="tags">
+        <li>Python</li>
+        <li>statsmodels</li>
+        <li>Mean reversion</li>
+      </ul>
+
+      <div class="entry-links">
+        <a href="https://github.com/your-username/pairs-trading">Code</a>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    &copy; <span id="year">2026</span> Your Name
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
